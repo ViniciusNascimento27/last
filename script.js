@@ -14,5 +14,13 @@ function registrarLog(nomeAluno) {
     return id;
 }
 
-// Exemplo de uso:
-// registrarLog("João da Silva");
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.use(express.json());
+
+app.listen(port, () => {
+    console.log(`Servidor rodando em http://localhost:${port}`);
+});
+
